@@ -20,9 +20,8 @@ class HomeRemoteDataSource {
 
   Future<FlashCardModel> getFollowing() async {
     const endpoint = '${Urls.baseUrl}/following';
-    final result = await _fetchData<FlashCardModel>(
+    return _fetchData<FlashCardModel>(
         endpoint, (item) => FlashCardModel.fromJson(item));
-    return result;
   }
 
   Future<McqModel> getForYou() async {
@@ -32,8 +31,7 @@ class HomeRemoteDataSource {
 
   Future<RevealModel> reveal(int id) async {
     final endpoint = '${Urls.baseUrl}/reveal?id=$id';
-    final result = await _fetchData<RevealModel>(
+    return _fetchData<RevealModel>(
         endpoint, (item) => RevealModel.fromJson(item));
-    return result;
   }
 }
