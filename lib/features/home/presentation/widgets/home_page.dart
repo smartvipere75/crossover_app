@@ -37,18 +37,6 @@ class HomePage extends StatelessWidget {
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             elevation: 0,
-            // leading: Row(
-            //   children: [
-            //     Icon(
-            //       Icons.timer,
-            //       color: Colors.white,
-            //     ),
-            //     Text(
-            //       '10m',
-            //       style: TextStyle(color: Colors.white),
-            //     )
-            //   ],
-            // ),
             title: TopTitleWidget(),
           ),
           extendBodyBehindAppBar: true,
